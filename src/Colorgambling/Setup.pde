@@ -1,8 +1,9 @@
 // To be set by the user //
 
 //Orientation of Source Image (LANDSCAPE or PORTRAIT)
-//Uncomment the corresponding size() call inside the setup() call
-final int orientation = LANDSCAPE;
+final int orientation = PORTRAIT;
+
+//Dimensions of sourcefile
 
 //Dimensions in Portrait format
 final int shapeWidthP = 200;
@@ -14,11 +15,27 @@ final int shapeHeightL = 200;
 
 //-----------------------//
 
-void setup() {
-  //size(600, 1200); // Portrait Mode
-  size(1200, 600); //Landscape Mode
+void settings(){
+  int x = 0;
+  int y = 0;
+  
+  switch(orientation){
+    case(PORTRAIT):
+      x = 3 * shapeWidthP;
+      y = 2 * shapeHeightP;
+      break;
+    case(LANDSCAPE):
+      x = 2 * shapeWidthL;
+      y = 3 * shapeHeightL;
+      break;
+  }     
+  
+  size(x, y);
+}
 
+void setup() {
   background(100);
+  
   //Start source graphic creation process
   createSourceGraphic(#FFCE00, #0375B4, #007849, #262228, orientation);
 
