@@ -1,4 +1,2 @@
 # Colorgambling
-Processing Art Project
-
-by Thomas
+Processing Art Project.
