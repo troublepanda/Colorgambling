@@ -20,15 +20,15 @@ void createSourceGraphic(color color1, color color2, color color3, color color4,
 
     //Shape 2
     sourceGraphic.fill(color2);
-    sourceGraphic.rect(0, round(height / 3), shapeWidthL, shapeHeightL);
+    sourceGraphic.rect(0, round(sourceHeight / 3), shapeWidthL, shapeHeightL);
 
     //Shape 3
     sourceGraphic.fill(color3);
-    sourceGraphic.rect(round(width / 2), round(height / 3), shapeWidthL, shapeHeightL);
+    sourceGraphic.rect(round(sourceWidth / 2), round(sourceHeight / 3), shapeWidthL, shapeHeightL);
 
     //Shape 4
     sourceGraphic.fill(color4);
-    sourceGraphic.rect(round(0.5 * shapeWidthL), 2 * round(height / 3), shapeWidthL, shapeHeightL);
+    sourceGraphic.rect(round(0.5 * shapeWidthL), 2 * round(sourceHeight / 3), shapeWidthL, shapeHeightL);
 
     //Finishing drawing process
     sourceGraphic.endDraw();
@@ -44,7 +44,7 @@ void createSourceGraphic(color color1, color color2, color color3, color color4,
 
     // Shape 1
     sourceGraphic.fill(color1);
-    sourceGraphic.rect(round(width / 3), 0, shapeWidthP, shapeHeightP);
+    sourceGraphic.rect(round(sourceWidth / 3), 0, shapeWidthP, shapeHeightP);
 
     //Shape 2
     sourceGraphic.fill(color2);
@@ -56,7 +56,7 @@ void createSourceGraphic(color color1, color color2, color color3, color color4,
 
     //Shape 4
     sourceGraphic.fill(color4);
-    sourceGraphic.rect(round(width / 3), round(0.5 * height), shapeWidthP, shapeHeightP);
+    sourceGraphic.rect(round(sourceWidth / 3), round(0.5 * sourceHeight), shapeWidthP, shapeHeightP);
 
     //Finishing drawing process
     sourceGraphic.endDraw();

@@ -1,5 +1,4 @@
 //Global Objects
-PImage img;
 
 //Enums
 public enum Orientation {
@@ -8,5 +7,10 @@ public enum Orientation {
 
 //Functions
 void draw() {
-  image(sourceGraphic, 0, 0);
+  moveCutouts();
+  
+}
+
+void moveCutouts(){
+  
 }
