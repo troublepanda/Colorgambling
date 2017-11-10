@@ -2,7 +2,7 @@
 
 //Orientation of Source Image (LANDSCAPE or PORTRAIT)
 
-final int orientation = LANDSCAPE;
+final int orientation = PORTRAIT;
 //-----------------------//
 //Dimensions in Portrait format
 
@@ -16,8 +16,8 @@ final int sourceHeightL = 1200;
 //-----------------------//
 //Cutout Settings
 
-final int cutoutWidth = 200;
-final int cutoutHeight = 300;
+final int cutoutWidth = 300;
+final int cutoutHeight = 450;
 
 //#######################//
 //DO NOT CHANGE
@@ -48,11 +48,12 @@ void settings(){
 
 void setup() {
   background(180);
+  frameRate(1);
   
   //Start source graphic creation process
   createSourceGraphic(#FFCE00, #0375B4, #007849, #262228, orientation);
   
   //Cutout Object initialisation
-  Cutout cutout1 = new Cutout(100, 100);
+  cutout1 = new Cutout(100, 100);
   //Cutout cutouts[] = {cutout1, cutout2, cutout3, cutout4, cutout5, cutout6, cutout7};
 }
