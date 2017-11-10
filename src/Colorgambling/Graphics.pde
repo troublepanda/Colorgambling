@@ -9,7 +9,7 @@ void createSourceGraphic(color color1, color color2, color color3, color color4,
   case LANDSCAPE:
 
     //Initialize the canvas
-    sourceGraphic = createGraphics(1200, 600);
+    sourceGraphic = createGraphics(sourceWidth, sourceHeight);
     sourceGraphic.beginDraw();
     sourceGraphic.background(#FFFFFF);
     sourceGraphic.noStroke();
@@ -37,7 +37,7 @@ void createSourceGraphic(color color1, color color2, color color3, color color4,
   case PORTRAIT:
 
     //Initialize the canvas
-    sourceGraphic = createGraphics(600, 1200);
+    sourceGraphic = createGraphics(sourceWidth, sourceHeight);
     sourceGraphic.beginDraw();
     sourceGraphic.background(#FFFFFF);
     sourceGraphic.noStroke();

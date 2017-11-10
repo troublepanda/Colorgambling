@@ -8,6 +8,7 @@ public enum Orientation {
 //Functions
 void draw() {
   moveCutouts();
+  image(sourceGraphic, 0, 0);
   
 }
 

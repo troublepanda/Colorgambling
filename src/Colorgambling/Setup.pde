@@ -1,71 +1,58 @@
 // To be set by the user //
 
 //Orientation of Source Image (LANDSCAPE or PORTRAIT)
+
 final int orientation = LANDSCAPE;
-
+//-----------------------//
 //Dimensions in Portrait format
-final int shapeWidthP = 200;
-final int shapeHeightP = 600;
 
+final int sourceWidthP = 600;
+final int sourceHeightP = 1200;
+//-----------------------//
 //Dimensions in Landscape format
-final int shapeWidthL = 600;
-final int shapeHeightL = 200;
 
+final int sourceWidthL = 2400;
+final int sourceHeightL = 1200;
+//-----------------------//
 //Cutout Settings
+
 final int cutoutWidth = 200;
 final int cutoutHeight = 300;
 
-//-----------------------//
+//#######################//
+//DO NOT CHANGE
+//Landscape dimensions
+final int shapeWidthL = round(sourceWidthL / 2);
+final int shapeHeightL = round(sourceHeightL / 3);
+//Portrait dimensions
+final int shapeWidthP = round(sourceWidthP / 3);
+final int shapeHeightP = round(sourceHeightP / 2);
 
-//Dimensions of sourcefile
 int sourceWidth = 0;
 int sourceHeight = 0;
+//#######################//
 
 void settings(){
   switch(orientation){
     case(LANDSCAPE):
-      sourceWidth = 1200;
-      sourceHeight = 600;
+      sourceWidth = sourceWidthL;
+      sourceHeight = sourceHeightL;
       break;
     case(PORTRAIT):
-      sourceWidth = 600;
-      sourceHeight = 1200;
+      sourceWidth = sourceWidthP;
+      sourceHeight = sourceHeightP;
       break;
   }
-  
-  fullScreen();
-  //int x = 0;
-  //int y = 0;
-  
-  //switch(orientation){
-  //  case(PORTRAIT):
-  //    x = 3 * shapeWidthP;
-  //    y = 2 * shapeHeightP;
-  //    break;
-  //  case(LANDSCAPE):
-  //    x = 2 * shapeWidthL;
-  //    y = 3 * shapeHeightL;
-  //    break;
-  //}
-  
+  fullScreen();  
 }
 
 void setup() {
-  background(100);
+  background(180);
   
   //Start source graphic creation process
   createSourceGraphic(#FFCE00, #0375B4, #007849, #262228, orientation);
   
-  
   //Cutout Object initialisation
   Cutout cutout1 = new Cutout(100, 100);
-  Cutout cutout2 = new Cutout(500, 100);
-  Cutout cutout3 = new Cutout();
-  Cutout cutout4 = new Cutout();
-  Cutout cutout5 = new Cutout();
-  Cutout cutout6 = new Cutout();
-  Cutout cutout7 = new Cutout();
-  cutout1.draw();
-  cutout2.draw();
-  Cutout cutouts[] = {cutout1, cutout2, cutout3, cutout4, cutout5, cutout6, cutout7};
+  //Cutout cutouts[] = {cutout1, cutout2, cutout3, cutout4, cutout5, cutout6, cutout7};
 }
